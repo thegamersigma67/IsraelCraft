@@ -164,7 +164,7 @@
       modeToggle.setAttribute('aria-label', 'Enable nighttime map');
       modeToggle.setAttribute('aria-pressed', 'false');
       modeToggle.title = 'Enable nighttime map';
-      modeToggle.textContent = '🌙 Night';
+      modeToggle.textContent = '☾';
       controls.appendChild(modeToggle);
     }
     if (!modeToggle) return;
@@ -203,6 +203,10 @@
       if (!image.naturalWidth || !image.naturalHeight) return;
       const width = container.clientWidth;
       const height = container.clientHeight;
+      mapImages.forEach(mapImage => {
+        mapImage.style.width = `${image.naturalWidth}px`;
+        mapImage.style.height = `${image.naturalHeight}px`;
+      });
       const imageW = image.naturalWidth;
       const imageH = image.naturalHeight;
       const fitScale = Math.min(width / imageW, height / imageH);
