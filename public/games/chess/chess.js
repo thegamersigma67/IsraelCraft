@@ -6,7 +6,7 @@ const PIECE_NAMES = { p:"pawn", n:"knight", b:"bishop", r:"rook", q:"queen", k:"
 class ChessGame {
   constructor(root, options = {}) {
     this.root = root;
-    this.mode = options.mode || "local";
+    this.mode = options.mode || "bot";
     this.level = "club";
     this.game = new Chess();
     this.history = [];
