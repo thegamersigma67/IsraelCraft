@@ -72,11 +72,14 @@
     });
     const observer = new MutationObserver(() => {
       const transform = getComputedStyle(mapImage).transform;
-      const match = transform.match(/^matrix\\(([^,]+),/);
-      view.scale = match ? Number(match[1]) || 1 : 1;
-      const values = transform.match(/^matrix\\([^,]+,[^,]+,[^,]+,[^,]+,([^,]+),([^\)]+)\\)$/);
-      if (values) { view.x = Number(values[1]) || 0; view.y = Number(values[2]) || 0; }
-      layer.style.transform = transform === 'none' ? '' : transform;
+      if (transform === 'none') {
+        view = { scale: 1, x: 0, y: 0 };
+        layer.style.transform = '';
+        return;
+      }
+      const matrix = new DOMMatrixReadOnly(transform);
+      view = { scale: matrix.a || 1, x: matrix.e || 0, y: matrix.f || 0 };
+      layer.style.transform = transform;
     });
     observer.observe(mapImage, { attributes:true, attributeFilter:['style'] });
     render();
