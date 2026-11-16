@@ -1,4 +1,8 @@
 :root{--ic-chess-ink:var(--ink,#161616);--ic-chess-paper:var(--paper,#f2ecd9);--ic-chess-blue:var(--blue,#1d4e89);--ic-chess-muted:var(--muted,#6f6859);--ic-chess-card:var(--card,#f7f2e5);--ic-chess-line:var(--line,#bdb39a);--ic-chess-pixel:var(--pixel,"Courier New",monospace);--ic-chess-sans:var(--sans,system-ui,sans-serif)}
+.ic-chess-page{max-width:1100px;margin:auto;padding:28px 16px;color:var(--ic-chess-ink);font-family:var(--ic-chess-sans)}
+.ic-chess-eyebrow{margin:0 0 8px;color:var(--ic-chess-blue);font:800 .7rem var(--ic-chess-pixel);letter-spacing:.1em}
+.ic-chess-page h1{margin:0 0 22px;font-size:clamp(2.2rem,7vw,4.5rem);line-height:1}
+.ic-chess-page h1 small{display:block;margin-top:6px;color:var(--ic-chess-blue);font:800 .28em var(--ic-chess-pixel);letter-spacing:.1em}
 #ic-chess-root{max-width:1040px;margin:0 auto}
 .ic-chess-shell{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(230px,.7fr);gap:18px;align-items:start}
 .ic-chess-main,.ic-chess-panel,.ic-chess-tools{border:1px solid var(--ic-chess-line);background:var(--ic-chess-card);box-shadow:0 4px 14px #1616160d}
