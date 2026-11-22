@@ -169,8 +169,8 @@
     }
     if (!modeToggle) return;
 
-    image.src = 'images/map.png';
-    if (nightImage) nightImage.src = 'images/nightmap.png';
+    image.src = 'images/map.jpg';
+    if (nightImage) nightImage.src = 'images/nightmap.jpg';
 
     container.style.touchAction = 'none';
     container.style.userSelect = 'none';
