@@ -1,8 +1,8 @@
 (() => {
   const image = document.getElementById('map-image');
-  if (image) image.src = 'images/map.png';
+  if (image) image.src = 'images/map.jpg';
   const nightImage = document.getElementById('map-image-night');
-  if (nightImage) nightImage.src = 'images/nightmap.png';
+  if (nightImage) nightImage.src = 'images/nightmap.jpg';
 
   function setup() {
     const container = document.getElementById('map-container');
