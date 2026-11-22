@@ -118,19 +118,19 @@
             </thead>
             <tbody>
               <tr>
-                <td class="rank-1">Glenn 1st</td>
+                <td class="rank-1">Pierson 1st</td>
                 <td class="rank-1">Pierson 1st</td>
                 <td class="rank-1">Pierson 1st</td>
                 <td class="rank-1">Pierson 1st</td>
               </tr>
               <tr>
-                <td class="rank-2">Pierson 2nd</td>
+                <td class="rank-2">Max 2nd</td>
                 <td class="rank-2">Max 2nd</td>
                 <td class="rank-2">Glenn 2nd</td>
                 <td class="rank-2">Max 2nd</td>
               </tr>
               <tr>
-                <td class="rank-3">Max 3rd</td>
+                <td class="rank-3">Glenn 3rd</td>
                 <td class="rank-3">Glenn 3rd</td>
                 <td class="rank-3">Max 3rd</td>
                 <td class="rank-3">Glenn 3rd</td>
@@ -210,8 +210,8 @@
       const imageW = image.naturalWidth;
       const imageH = image.naturalHeight;
       const fitScale = Math.min(width / imageW, height / imageH);
-      minScale = Math.max(fitScale, 0.35);
-      scale = clamp(Math.max(fitScale * 2.1, 1.35), minScale, MAX_SCALE);
+      minScale = Math.max(fitScale * 0.65, 0.01);
+      scale = clamp(fitScale, minScale, MAX_SCALE);
       x = width / 2 - (imageW * scale) / 2;
       y = height / 2 - (imageH * scale) / 2;
       render();
